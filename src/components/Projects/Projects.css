@@ -1,0 +1,128 @@
+/* components/Projects/Projects.css */
+.projects {
+  padding: 100px 0;
+  background: #1a1a2e;
+  color: white;
+}
+
+.projects-categories {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.category-btn:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+}
+
+.category-btn.active {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  color: white;
+  border-color: #6366f1;
+}
+
+.projects-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.projects-3d {
+  height: 400px;
+  position: relative;
+}
+
+.projects-list {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #6366f1;
+}
+
+.project-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #6366f1;
+}
+
+.project-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 968px) {
+  .projects-showcase {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .projects-3d {
+    height: 300px;
+  }
+  
+  .projects-list {
+    height: auto;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-categories {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .category-btn {
+    width: 200px;
+  }
+}
